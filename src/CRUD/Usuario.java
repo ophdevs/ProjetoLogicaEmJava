@@ -1,9 +1,12 @@
-package entidades;
+package CRUD;
+
+import java.time.Instant;
 
 public class Usuario {
     private String usuario;
     private Integer ID;
     private String senha;
+    private Instant dateCreator;
 
     public Usuario() {
 
@@ -18,6 +21,8 @@ public class Usuario {
         this.ID = ID;
         this.senha = senha;
         this.usuario= usuario;
+        this.dateCreator = Instant.now(); // setar data
+
     }
 
     public String getUsuario() {
@@ -56,6 +61,11 @@ public class Usuario {
        System.out.println("|        4- Painel Admin                 |");
        System.out.println("|        5- Sair                         |");
        System.out.println("-----------------------------------------");
+   }
+
+   public String VerificarUsuariot (list lista,String usuario, String senha){
+       System.out.println("ello");
+
    }
 }
 

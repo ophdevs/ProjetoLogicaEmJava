@@ -1,4 +1,6 @@
-import entidades.Usuario;
+package CRUD;
+
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,6 +19,7 @@ public class Project {
             switch (opcao){
                 case 1:
                     System.out.println("Deseja cadastrar quantos usuarios: ");
+                    Instant dataCriacao = Instant.now();
                     int quantUser = sc.nextInt();
                     sc.nextLine();
                     for (int i = 0; i < quantUser; i++){
@@ -73,8 +76,10 @@ public class Project {
                     while(cond = true){
                         System.out.print("Usuario: ");
                         String usuario = sc.nextLine();
+
                         System.out.print("Senha: ");
                         String senha = sc.nextLine();
+
                         for (int i = 0; i < lista.size(); i++){
                             if (lista.get(i).getUsuario().equals(usuario) && lista.get(i).getSenha().equals(senha)){
                                 cond = false;
@@ -89,6 +94,11 @@ public class Project {
                     break;
 
                 case 4:
+                    System.out.println("usuario: ");
+                    String usuario = sc.nextLine();
+                    System.out.println("senha: ");
+                    String senha = sc.nextLine();
+
 
                     break;
 
