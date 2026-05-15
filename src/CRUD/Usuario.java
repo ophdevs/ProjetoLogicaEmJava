@@ -63,9 +63,5 @@ public class Usuario {
        System.out.println("-----------------------------------------");
    }
 
-   public String VerificarUsuariot (list lista,String usuario, String senha){
-       System.out.println("ello");
-
-   }
 }
 
