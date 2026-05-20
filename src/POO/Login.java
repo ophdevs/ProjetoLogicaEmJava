@@ -33,6 +33,14 @@ public class Login {
                 System.out.println("----------------Logar----------------");
 
                 break;
+
+            case 3:
+                System.out.println("");
+                break;
+
+            default:
+                System.out.println("burro");
+                break;
         }
     }
 }
