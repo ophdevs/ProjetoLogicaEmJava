@@ -8,10 +8,9 @@ import java.text.ParseException; // se der erro no parse
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
-public class petshop {
+public class Main {
     public static void main(String[] args) throws ParseException{
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -32,7 +31,7 @@ public class petshop {
 
         for (int i = 0; i < quantServ; i++){
             System.out.println("Servico #" + (i + 1));
-            System.out.println("digite a data: ");
+            System.out.println("digite a data (DD/MM/YYYY): ");
             Date data = sdf.parse(sc.next()); //criar date
             System.out.print("Qual o tipo de serviço (BANHO/VETERINARIO/TOSA): ");
             TiposServicos servicoEnum = TiposServicos.valueOf(sc.next().toUpperCase()); // value do enum e toUper para deixar maiusculo
@@ -46,11 +45,17 @@ public class petshop {
             pet.addServicos(servico); // passa o servico para metodo
         }
 
-        System.out.print("coloque o mes e ano para calcular (MM/yyyy): ");
+        System.out.print("Coloque o mes: ");
         int mes = sc.nextInt();
+
+        System.out.println("Coloque o ano: ");
         int ano = sc.nextInt();
 
-
+        System.out.println("-----Resultado-----");
+        System.out.println("Pet = " + pet.getName());
+        System.out.println("Dono = " + pet.getDono().getNome());
+        System.out.println("Especie = " + pet.getEspecie());
+        System.out.printf("Gasto de %02d/%d é %.2f%n", mes, ano, pet.totalGasto(mes,ano));
 
 
     }

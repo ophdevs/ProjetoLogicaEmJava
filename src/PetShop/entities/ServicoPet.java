@@ -48,4 +48,9 @@ public class ServicoPet {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
+
+    public Double valorTotal (){
+        return preco;
+
+    }
 }
